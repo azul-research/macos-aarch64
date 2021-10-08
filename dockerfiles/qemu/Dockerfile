@@ -9,3 +9,6 @@ RUN \
 		binfmt-support \
         && apt-get clean \
         && rm -rf /var/lib/apt /var/cache/apt
+
+COPY entrypoint.sh /
+ENTRYPOINT [ "/bin/sh", "/entrypoint.sh" ]

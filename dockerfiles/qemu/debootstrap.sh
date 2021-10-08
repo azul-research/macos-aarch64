@@ -12,3 +12,6 @@ qemu-debootstrap \
 	buster \
 	$SYSROOT \
 	http://httpredir.debian.org/debian
+
+# JDK fails to build with the static libm
+mv $SYSROOT/lib/aarch64-linux-gnu/libm.a{,.bck}
