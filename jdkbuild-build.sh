@@ -25,7 +25,8 @@ then
   dr aarch64-cross bash configure \
     --openjdk-target=aarch64-linux-gnu \
     --with-sysroot=./sysroot \
-    --with-boot-jdk=/opt/$BOOT_JDK
+    --with-boot-jdk=/opt/$BOOT_JDK \
+    --with-zlib=bundled
   echo ""
 
   dr aarch64-cross make clean
