@@ -14,4 +14,13 @@ qemu-debootstrap \
 	http://httpredir.debian.org/debian
 
 # JDK fails to build with the static libm
-mv $SYSROOT/lib/aarch64-linux-gnu/libm.a{,.bck}
+
+OLD_NAME=$SYSROOT/lib/aarch64-linux-gnu/libm.a
+NEW_NAME=$OLD_NAME.bck
+
+[ -f $OLD_NAME ] && mv $OLD_NAME $NEW_NAME
+
+if [ ! -f $NEW_NAME ] ; then
+  echo "$NEW_NAME is missing, aborting"
+  exit 1
+fi
