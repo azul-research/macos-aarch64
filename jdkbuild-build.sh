@@ -24,9 +24,11 @@ then
 
   dr aarch64-cross bash configure \
     --openjdk-target=aarch64-linux-gnu \
-    --with-sysroot=./sysroot \
+    --with-sysroot=$PWD/sysroot \
     --with-boot-jdk=/opt/$BOOT_JDK \
-    --with-zlib=bundled
+    --with-zlib=bundled \
+    --with-extra-cxxflags="-std=c++11" \
+    --with-num-cores=3    
   echo ""
 
   dr aarch64-cross make clean
