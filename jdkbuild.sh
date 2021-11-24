@@ -18,5 +18,6 @@ sudo modprobe binfmt_misc
 # once -> build STEPS
 ./jdkbuild-once.sh
 ./jdkbuild-build.sh -c
+./jdkbuild-run.sh
 
 echo "jdkbuild: SUCCESS"
