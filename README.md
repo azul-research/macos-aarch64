@@ -10,7 +10,17 @@
 
 Отслеживаются в https://github.com/azul-research/macos-aarch64/projects/1
 
+## Настройка
+
+В процессе работы придётся разрешать много git конфликтов.
+С ними проще работать, если git сконфигурирован в стиль diff3. https://git-scm.com/book/en/v2/Git-Tools-Advanced-Merging
+
+```
+git config --global merge.conflictstyle diff3
+```
+
 ## Процесс
+
 
 Накапливаем очередь для бекпортов в azul-research/jdkNN-dev:macos-aarch64.
 Строго линейная последовательность коммитов без мёржей.
