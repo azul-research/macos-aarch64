@@ -14,3 +14,4 @@ docker run -it --rm --privileged -v $PWD:$PWD -w $PWD aarch64-qemu \
   dockerfiles/qemu/debootstrap.sh ./sysroot
 
 echo -e "once step: SUCCESS\n"
+echo -e "I'm at: $PWD\n"
